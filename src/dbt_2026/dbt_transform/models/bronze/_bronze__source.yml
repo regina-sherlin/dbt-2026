@@ -1,0 +1,21 @@
+sources: 
+    - name: movies_schema
+      description: "This is the source table for movies"
+      database: movies
+      schema: movies_schema
+      tables:
+        - name: movies_tb
+          description: "This is the source table for movies"
+          columns:
+            - name: movie_id
+              description: "This is the movie id"
+              tests:
+                - not_null
+                - unique
+            - name: title
+              description: "This is the movie title"
+              tests:
+                - not_null
+            - name: genres
+              description: "This is the movie genres"
+              
